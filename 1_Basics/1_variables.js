@@ -92,7 +92,7 @@ console.log('The value of the variable primitive is: ' + primitive);
 // All your efforts would be in vain. So what's the Catch 22? No need to 
 // change them, simply _replace_ them.
 
-primitive = 'I am so primitive.';
+primitive = 'I am no longer primitive. I am making progress';
 console.log(primitive);
 
 // Assign the new string 'I am no longer primitive. I am making progress!'
@@ -135,6 +135,7 @@ console.log(primitive);
 // integer.
 morpho = 1;
 
+
 console.log('Morpho: ' + morpho);
 console.log('The type of Morpho is: ' + typeof morpho);
 // It is good practice to always add the semicolon at the of a statement.
@@ -152,7 +153,7 @@ console.log('The type of Morpho is now: ' + typeof morpho);
 
 
 // Strings
-
+morpho = "1";
 
 console.log('Morpho: ' + morpho);
 console.log('The type of Morpho is now: ' + typeof morpho);
@@ -161,19 +162,19 @@ console.log('The type of Morpho is now: ' + typeof morpho);
 
 // A one-type character string is also a string. Other languages have
 // the type 'char' for this special case, but not JS.
-
+morpho = "1";
 console.log('Morpho: ' + morpho);
 console.log('The type of Morpho is now: ' + typeof morpho);
 
 // Booleans.
 
 // False.
-
+morpho = false;
 console.log('Morpho: ' + morpho);
 console.log('The type of Morpho is now: ' + typeof morpho);
 
 // True.
-
+morpho = true;
 console.log('Morpho: ' + morpho);
 console.log('The type of Morpho is now: ' + typeof morpho);
 
@@ -185,7 +186,7 @@ console.log('Morpho: ' + morpho);
 console.log('The type of Morpho is now: ' + typeof morpho);
 
 // Null
-
+morpho = null;
 console.log('Morpho: ' + morpho);
 console.log('The type of Morpho is now: ' + typeof morpho);
 
