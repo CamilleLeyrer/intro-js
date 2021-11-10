@@ -42,6 +42,15 @@
 // Hint: variables do not transfer magically across files, that is why you
 // need to create a new variable with the population of Luzern here.
 // Hint2: Use console.log() to print.
+rndNr = Math.random();
+luzernPopulation = 82000;
+if (rndNr >luzernPopulation) {
+console.log("Go Luzern!")
+}else if (rndNr == luzernPopulation){
+    console.log("Are we in the Matrix?")
+}else{
+    console.log("Few but good")
+}
 
 // EXERCISE 2. Block Party.
 ///////////////////////////
@@ -49,16 +58,23 @@
 // The brackets of conditionals define a block scope. Depending on how you 
 // define variables this has important implications.
 
-// The following code isn't working. Why?
+// The following code isn't working. Why? 2 is never > than 1
 if (2 > 1) {
     let deepThought = 'Everything is obvious once you know the answer.'    
 }
 console.log(deepThought);
 
 // a. Fix it using it var instead of let.
-
+if (2 > 1) {
+    var deepThought = 'Everything is obvious once you know the answer.'    
+}
+console.log(deepThought);
 // b. Fix it using let.
-
+let deepThought;
+if (2 > 1) {
+    let deepThought = 'Everything is obvious once you know the answer.'    
+}
+console.log(deepThought);
 
 // EXERCISE 3. Loose vs Strict Comparisons.
 ///////////////////////////////////////////
@@ -67,13 +83,13 @@ console.log(deepThought);
 
 // Run the following loose type comparisons.
 
-if (1 == '1') console.log('True');
+if (1 === '1') console.log('True');
 else console.log('False');
 
-if (0 == false) console.log('True');
+if (0 === false) console.log('True');
 else console.log('False');
 
-if (0 == []) console.log('True');
+if (0 === []) console.log('True');
 else console.log('False');
 
 // Weird, right? See the full list of patological cases here:
