@@ -25,12 +25,13 @@ str2 = 'Just like everyone else.';
 
 // a. Join together these two strings and assign the result to a new variable
 // named finalStr.
-
+newVar = str1 + ' '+ str2
+console.log(newVar)
 
 // b. Did you remember to add a space between them?
 // If so, how many characters is the final string?
 // Hint: Use the length property.
-
+console.log('The final string is ' + newVar.length + ' chars long');
 
 // EXERCISE 3. Joining Different Types.
 ///////////////////////////////////////
@@ -46,7 +47,10 @@ luzernPopulation = 82000;
 // "Just like other X persons in Luzern." (X to be replaced with the count)
 // Then, join it with str1 and update finalStr.
 // Important. The sentence must end with a dot (needed for exercise below).
-
+str2 = "Just like other 82000 persons in Luzern."
+str1 + " " + str2
+newVar = str1 + ' '+ str2
+console.log(newVar)
 // EXERCISE 4. Mind the Tick.
 /////////////////////////////
 
@@ -55,7 +59,11 @@ luzernPopulation = 82000;
 // the format `${myvariable}`.
 
 // Repeast exercise 3 using backticks.
+luzernPopulation = 82000;
+str1 = "Always remember that you are absolutely unique.";
 
+finalStr = `${str1} Just like ${luzernPopulation} persons in Luzern.`;
+console.log(finalStr);
 
 // EXERCISE 5. Such a String Manipulator.
 /////////////////////////////////////////
@@ -67,15 +75,24 @@ luzernPopulation = 82000;
 // a. From the variable finalStr, extract a substring which contains only
 // the first part (i.e., the  initial content of str1).
 // Hint: Use the .substring() method and the length property.
-
+finalStr = finalStr.substring(0, str1)
+console.log(finalStr)
 
 // f. Now shout it loud and make the it upper case.
 // Hint: Use the method .toUpperCase().
-
-
+luzernPopulation = 82000;
+str1 = "Always remember that you are absolutely unique.";
+finalStr = `${str1} Just like ${luzernPopulation} persons in Luzern.`;
+finalStr = finalStr.toUpperCase()
+console.log(finalStr)
 // g. Let's be honest. An upper case sentence must end with an exclamation mark.
 // Replace the dot at the end of the sentence with an exclamation mark.
-
+luzernPopulation = 82000;
+str1 = "Always remember that you are absolutely unique.";
+finalStr = `${str1} Just like ${luzernPopulation} persons in Luzern.`;
+finalStr = finalStr.toUpperCase()
+finalStr = finalStr.substring(0, (finalStr.length - 1)) + '!';
+console.log(finalStr)
 
 // EXERCISE 6. Operators: const, var, let.
 //////////////////////////////////////////
@@ -94,19 +111,20 @@ luzernPopulation = 82000;
 
 // a. Assign finalStr to a constant.
 finalStr = 'ALWAYS REMEMBER THAT YOU ARE ABSOLUTELY UNIQUE!';
-
+const myFinalStr = finalStr;
+console.log(myFinalStr);
 
 // b. Now try to change it to something else.
-
+myFinalStr = "Hello change";
 
 // You should have seen error. We will later learn that constants behave
 // differently with objects.
 
 // c. If you instead use let to declare a variable, that variable needs not be 
 // already declared. Raise an error by re-declaring the variable below with let. 
-
+let myLetVariable = "I am awesome!";
 myLetVariable = 'Do not re-assign me.';
-
+let myLetVariable = "Oh but I just did"
 
 //////////////////////////////
 // You finished this sheet! //
