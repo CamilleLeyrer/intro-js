@@ -36,28 +36,33 @@ console.log(typeof null);
 
 // EXERCISE 1. Create an object to represent a person.
 //////////////////////////////////////////////////////
-
 // a. The person is identified by two properties: name and year.
 // Let's pick Brendan Eich, the creator of JavaScript. The guy who
 // decided that the type of null is 'object'.
 // Hint. The property name must contain the full name (Brendan Eich), and
 // the property birth must contain the year in which he was born (1961).
+let person = {
+    name: "Brendan Eich",
+    year: "1961"
+}
+
 
 // b. Access the properties of the person object and create a sentence of the
 // type: "X was born in Y." where X is Brendan Eich and Y is 1961.
-
+console.log(person.name + " " +"was born in " + person.year + ".")
 // c. Bonus exercise. Instead of saying that year of birth, you could say that
 // Brendan Eich is Z years old.  
-
+console.log(person.name + " "+ "is " + (2021 - person.year) + " years old." )
 
 // EXERCISE 2. Add and remove properties to the person object.
 //////////////////////////////////////////////////////
 
 // Now you realize that it makes more sense to split the property 'name' into
 // two: 'first' and 'last' name. Accordingly you delete the propery name.
-
-
-
+delete person.name;
+person.prename = 'Brendan';
+person.lastname = 'Eich';
+console.log(person.prename +" "+ person.lastname)
 // EXERCISE 3. Bonus. Constant objects.
 ///////////////////////////////////////
 // This is weird, and it takes a lot of JavaScript to understand why it is so.
