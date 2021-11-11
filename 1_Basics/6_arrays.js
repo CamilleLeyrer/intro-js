@@ -27,23 +27,38 @@ console.log(typeof array);
 // inspiring personalities.
 // For example, Pablo Picasso and Napoleon Bonaparte. When are they born?
 
-brendan = {
+Brendan = {
     first: 'Brendan',
     last: 'Eich',
     year: 1961
 };
 
-// persons = ...
+Pablo = {
+    first: "Pablo",
+    last: "Picasso",
+    year: 1881
+}
 
+Napoleon = {
+    first: "Napoleon",
+    last: "Bonaparte",
+    year: 1769
+}
+
+let persons = [Brendan, Pablo, Napoleon]
+console.log(persons)
 // b. Count how many elements are in the array.
 // Hint: Use the .length property.
-
+console.log(persons.length)
 // EXERCISE 2. Accessing items inside arrays.
 /////////////////////////////////////////////
 
 // Access the second element of the array and create a string of the type: 
 // 'X was born in Y'.
-
+console.log(persons[1].first+ " was born in " + persons[1].year + ".")
+for(let i = 0; i < persons.length; i++){
+    console.log(persons[i].first+ " was born in " + persons[i].year + ".") 
+}
 // Hint: arrays are 0-indexed, that is the first element has index 0,
 // the second element 1, and so on.
 
@@ -51,7 +66,10 @@ brendan = {
 //////////////////////////////////////////////////////////
 
 // Repeat exercise 2, but this time you pick a random item from the array.
+randomNumber = Math.floor(Math.random()*persons.length);
+console.log(randomNumber);
 
+console.log(persons[randomNumber]);
 // Hint. Generate a random number between 0 and the total
 // number of elements in the array, then "floor" it with the corresponding
 // method of the Math object.
@@ -70,7 +88,12 @@ console.log(persons[randomNumber]);
 // Hint: There are a couple of ways of achieving this, depending to where
 // you would like to add the element. For instance the method `push`
 // will add at the bottom of the array.
-
+persons = [
+    { first: 'Brendan', last: 'Eich', year: 1961 },
+    { first: 'Pablo', last: 'Picasso', year: 1881 },
+    { first: 'Napoleon', last: 'Bonaparte', year: 1821 },
+    { first: "Phil", last: "Katz", year: 1962}
+];
 // Verify that you added at the bottom.
 console.log(persons[3]);
 
@@ -80,7 +103,7 @@ console.log(persons[3]);
 // Maybe you hurried too much with Phil Katz. What about
 // replacing him with Linus Torvalds (1969) instead?
 // Hint: simply assign a new value at a given array index.
-
+persons[3] = {first: "Linus", last:"Torvalds", year: "1969"}
 // Verify who is the bottom of the array.
 console.log(persons[3]);
 
@@ -93,7 +116,7 @@ console.log(persons[3]);
 // containing the data about Picasso and Napoleon.
 // Hint: the method `splice` modifies the original array and returns the
 // removed elements.
-
+persons.splice(1,2)
 // Verify the content of the updated array.
 console.log(persons);
 
@@ -106,6 +129,8 @@ console.log(persons);
 
 myArray = [];
 
+if (myArray.length) console.log('Array is not empty.');
+else console.log('Array is empty.');
 
 //////////////////////////////
 // You finished this sheet! //
