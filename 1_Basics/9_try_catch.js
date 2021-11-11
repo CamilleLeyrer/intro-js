@@ -33,9 +33,15 @@ console.log(typeof NaN);
 // in case they are not valid. A graceful fail is, for example,
 // a special return value with a warning on console.log.
 
+
 function divideNumbers(a, b) {
-    // Your code here.
+    if ('number' !== typeof a || 'number' !== typeof b) {
+        console.log('invalid inputs');
+        return false;
+    }
+    return a / b;
 }
+
 
 divideNumbers('what', {});
 divideNumbers(1, 2);
@@ -49,7 +55,7 @@ divideNumbers(1, 0);
 // thrown. If you got until here, you have probably alraedy seen errors
 // on the console.
 
-// Take the judgePerson function below. It will thrown an error if the second
+// Take the judgePerson function below. It will throw an error if the second
 // paramter is not a function.
 
 function judgePerson(person, cb) {
@@ -64,7 +70,12 @@ judgePerson(brendan);
 // we catch it with a try and catch statement and print an error message.
 
 function judgePerson(person, cb) {
-    // Your code here.
+    try {
+        let str = person.first + ' ' + person.last + cb()
+        console.log(str);
+    } catch (error) {
+        console.log("sorry, it's Brendan's fault!")
+    }
 }
 
 brendan = { first: 'Brendan', last: 'Eich', year: 1961 };

@@ -56,6 +56,7 @@ for (let i=0; i < persons.length; i++) {
     if (i !== persons.length - 1) paragraph += ', ';
 }
 paragraph += '.';
+console.log(str)
 // EXERCISE 3. Loop through the properties of an object.
 ////////////////////////////////////////////////////////
 
